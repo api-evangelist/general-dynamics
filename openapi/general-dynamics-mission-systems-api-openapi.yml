@@ -1,0 +1,108 @@
+openapi: 3.1.0
+info:
+  title: General Dynamics Mission Systems API
+  description: >-
+    General Dynamics Mission Systems provides technology products and services
+    for aerospace and defense applications, supporting mission-critical systems
+    and government IT solutions.
+  version: 1.0.0
+  contact:
+    name: General Dynamics
+    url: https://www.gd.com/
+servers:
+  - url: https://api.gdmissionsystems.com
+    description: Production
+paths:
+  /systems:
+    get:
+      operationId: getSystems
+      summary: Get Systems
+      description: Retrieve information about mission systems.
+      tags:
+        - Systems
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SystemList'
+  /systems/{systemId}:
+    get:
+      operationId: getSystemById
+      summary: Get System by ID
+      description: Retrieve details of a specific mission system.
+      tags:
+        - Systems
+      parameters:
+        - name: systemId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/System'
+  /products:
+    get:
+      operationId: getProducts
+      summary: Get Products
+      description: Retrieve technology products catalog.
+      tags:
+        - Products
+      responses:
+        '200':
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ProductList'
+tags:
+  - name: Systems
+    description: Mission systems operations
+  - name: Products
+    description: Technology products operations
+components:
+  schemas:
+    System:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        type:
+          type: string
+        description:
+          type: string
+        status:
+          type: string
+    SystemList:
+      type: object
+      properties:
+        systems:
+          type: array
+          items:
+            $ref: '#/components/schemas/System'
+    Product:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        category:
+          type: string
+        description:
+          type: string
+    ProductList:
+      type: object
+      properties:
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
