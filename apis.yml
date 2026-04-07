@@ -1,5 +1,6 @@
 aid: general-dynamics
-url: https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/apis.yml
+url: 
+  https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/apis.yml
 apis:
   - aid: general-dynamics:mission-systems-api
     name: General Dynamics Mission Systems API
@@ -8,7 +9,8 @@ apis:
       - Defense
       - Mission Systems
       - Government
-    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+    image: 
+      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.gdmissionsystems.com
     humanURL: https://gdmissionsystems.com/
     properties:
@@ -23,3 +25,6 @@ apis:
       offer a public developer API portal but utilizes API and microservices
       architectures internally for mission systems and defense technology
       solutions through GDIT.
+description: >-
+  We develop mission critical C4ISR solutions across the land, sea, air, space and
+  cyber domains.
