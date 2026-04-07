@@ -1,16 +1,14 @@
 aid: general-dynamics
-url: 
-  https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/apis.yml
+url: https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/apis.yml
 apis:
   - aid: general-dynamics:mission-systems-api
     name: General Dynamics Mission Systems API
     tags:
       - Aerospace
       - Defense
-      - Mission Systems
       - Government
-    image: 
-      https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
+      - Mission Systems
+    image: https://kinlane-productions2.s3.amazonaws.com/apis-json/apis-json-logo.jpg
     baseURL: https://api.gdmissionsystems.com
     humanURL: https://gdmissionsystems.com/
     properties:

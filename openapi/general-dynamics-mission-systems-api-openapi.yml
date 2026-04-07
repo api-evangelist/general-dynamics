@@ -62,10 +62,10 @@ paths:
               schema:
                 $ref: '#/components/schemas/ProductList'
 tags:
-  - name: Systems
-    description: Mission systems operations
   - name: Products
     description: Technology products operations
+  - name: Systems
+    description: Mission systems operations
 components:
   schemas:
     System:
