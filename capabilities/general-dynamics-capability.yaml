@@ -1,0 +1,137 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: General Dynamics Mission Systems API
+  description: General Dynamics Mission Systems provides technology products and services for aerospace and defense applications,
+    supporting mission-critical systems and government IT solutions.
+  tags:
+  - General
+  - Dynamics
+  - API
+  created: '2026-05-06'
+  modified: '2026-05-06'
+capability:
+  consumes:
+  - type: http
+    namespace: general-dynamics
+    baseUri: https://api.gdmissionsystems.com
+    description: General Dynamics Mission Systems API HTTP API.
+    resources:
+    - name: systems
+      path: /systems
+      operations:
+      - name: getsystems
+        method: GET
+        description: Get Systems
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: systems-systemid
+      path: /systems/{systemId}
+      operations:
+      - name: getsystembyid
+        method: GET
+        description: Get System by ID
+        inputParameters:
+        - name: systemId
+          in: path
+          type: string
+          required: true
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+    - name: products
+      path: /products
+      operations:
+      - name: getproducts
+        method: GET
+        description: Get Products
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    port: 8080
+    namespace: general-dynamics-rest
+    description: REST adapter for General Dynamics Mission Systems API.
+    resources:
+    - path: /systems
+      name: getsystems
+      operations:
+      - method: GET
+        name: getsystems
+        description: Get Systems
+        call: general-dynamics.getsystems
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /systems/{systemId}
+      name: getsystembyid
+      operations:
+      - method: GET
+        name: getsystembyid
+        description: Get System by ID
+        call: general-dynamics.getsystembyid
+        with:
+          systemId: rest.systemId
+        outputParameters:
+        - type: object
+          mapping: $.
+    - path: /products
+      name: getproducts
+      operations:
+      - method: GET
+        name: getproducts
+        description: Get Products
+        call: general-dynamics.getproducts
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    port: 9090
+    namespace: general-dynamics-mcp
+    transport: http
+    description: MCP adapter for General Dynamics Mission Systems API for AI agent use.
+    tools:
+    - name: getsystems
+      description: Get Systems
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: general-dynamics.getsystems
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getsystembyid
+      description: Get System by ID
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: general-dynamics.getsystembyid
+      with:
+        systemId: tools.systemId
+      inputParameters:
+      - name: systemId
+        type: string
+        description: systemId
+        required: true
+      outputParameters:
+      - type: object
+        mapping: $.
+    - name: getproducts
+      description: Get Products
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: general-dynamics.getproducts
+      outputParameters:
+      - type: object
+        mapping: $.
