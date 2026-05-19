@@ -1,0 +1,67 @@
+naftiko: 1.0.0-alpha2
+info:
+  label: General Dynamics Mission Systems API — Products
+  description: 'General Dynamics Mission Systems API — Products. 1 operations. Lead operation: Get Products. Self-contained
+    Naftiko capability covering one General Dynamics business surface.'
+  tags:
+  - General Dynamics
+  - Products
+  created: '2026-05-19'
+  modified: '2026-05-19'
+binds:
+- namespace: env
+  keys:
+    GENERAL_DYNAMICS_API_KEY: GENERAL_DYNAMICS_API_KEY
+capability:
+  consumes:
+  - type: http
+    namespace: mission-systems-products
+    baseUri: https://api.gdmissionsystems.com
+    description: General Dynamics Mission Systems API — Products business capability. Self-contained, no shared references.
+    resources:
+    - name: products
+      path: /products
+      operations:
+      - name: getproducts
+        method: GET
+        description: Get Products
+        outputRawFormat: json
+        outputParameters:
+        - name: result
+          type: object
+          value: $.
+  exposes:
+  - type: rest
+    namespace: mission-systems-products-rest
+    port: 8080
+    description: REST adapter for General Dynamics Mission Systems API — Products. One Spectral-compliant resource per consumed
+      operation, prefixed with /v1.
+    resources:
+    - path: /v1/products
+      name: products
+      description: REST surface for products.
+      operations:
+      - method: GET
+        name: getproducts
+        description: Get Products
+        call: mission-systems-products.getproducts
+        outputParameters:
+        - type: object
+          mapping: $.
+  - type: mcp
+    namespace: mission-systems-products-mcp
+    port: 9090
+    transport: http
+    description: MCP adapter for General Dynamics Mission Systems API — Products. One tool per consumed operation, routed
+      inline through this capability's consumes block.
+    tools:
+    - name: get-products
+      description: Get Products
+      hints:
+        readOnly: true
+        destructive: false
+        idempotent: true
+      call: mission-systems-products.getproducts
+      outputParameters:
+      - type: object
+        mapping: $.
