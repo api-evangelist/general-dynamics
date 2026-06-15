@@ -1,0 +1,66 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "General Dynamics Mission Systems API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Systems",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Systems",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.gdmissionsystems.com/systems"
+          },
+          "docs": "Retrieve information about mission systems."
+        },
+        {
+          "info": {
+            "name": "Get System by ID",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.gdmissionsystems.com/systems/:systemId",
+            "params": [
+              {
+                "name": "systemId",
+                "value": "",
+                "type": "path"
+              }
+            ]
+          },
+          "docs": "Retrieve details of a specific mission system."
+        }
+      ]
+    },
+    {
+      "info": {
+        "name": "Products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.gdmissionsystems.com/products"
+          },
+          "docs": "Retrieve technology products catalog."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
