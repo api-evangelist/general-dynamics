@@ -30,6 +30,8 @@ apis:
       offer a public developer API portal but utilizes API and microservices architectures internally for mission
       systems and defense technology solutions.
 common:
+  - type: AgenticAccess
+    url: agentic-access/general-dynamics-agentic-access.yml
   - type: DomainSecurity
     url: security/general-dynamics-domain-security.yml
   - type: LinkedIn
