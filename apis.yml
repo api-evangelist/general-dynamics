@@ -1,4 +1,17 @@
 aid: general-dynamics
+accessModel:
+  pricing: paid
+  onboarding: unknown
+  trial: false
+  try_now: false
+  public: false
+  label: Paid
+  confidence: medium
+  source:
+  - plans
+  generated: '2026-07-22'
+  method: derived
+image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/icons/general-dynamics.png
 name: General Dynamics
 url: https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/apis.yml
 modified: '2026-05-19'
@@ -9,26 +22,30 @@ tags:
   - Government
   - Fortune 100
 apis:
-  - aid: general-dynamics:mission-systems-api
-    name: General Dynamics Mission Systems API
-    tags:
-      - Aerospace
-      - Defense
-      - Government
-      - Mission Systems
-    image: https://kinlane-images.s3.amazonaws.com/shared/apis-json/apis-json-logo.jpg
-    baseURL: https://api.gdmissionsystems.com
-    humanURL: https://gdmissionsystems.com/
-    properties:
-      - url: https://gdmissionsystems.com/
-        type: Documentation
-      - url: openapi/general-dynamics-mission-systems-api-openapi.yml
-        type: OpenAPI
-    description: >-
-      General Dynamics Mission Systems provides technology products and services for aerospace and defense applications,
-      supporting mission- critical C4ISR solutions across land, sea, air, space, and cyber domains. The company does not
-      offer a public developer API portal but utilizes API and microservices architectures internally for mission
-      systems and defense technology solutions.
+- aid: general-dynamics:general-dynamics-products-api
+  name: General Dynamics Products API
+  description: Technology products operations
+  humanURL: https://gdmissionsystems.com/
+  baseURL: https://api.gdmissionsystems.com
+  tags:
+  - Products
+  properties:
+  - type: OpenAPI
+    url: openapi/general-dynamics-products-api-openapi.yml
+  - type: Documentation
+    url: https://gdmissionsystems.com/
+- aid: general-dynamics:general-dynamics-systems-api
+  name: General Dynamics Systems API
+  description: Mission systems operations
+  humanURL: https://gdmissionsystems.com/
+  baseURL: https://api.gdmissionsystems.com
+  tags:
+  - Systems
+  properties:
+  - type: OpenAPI
+    url: openapi/general-dynamics-systems-api-openapi.yml
+  - type: Documentation
+    url: https://gdmissionsystems.com/
 common:
   - type: AgenticAccess
     url: agentic-access/general-dynamics-agentic-access.yml
