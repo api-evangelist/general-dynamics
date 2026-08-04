@@ -1,0 +1,16 @@
+{
+  "provider": "general-dynamics",
+  "sources": [
+    "general-dynamics-products-api-openapi.yml",
+    "general-dynamics-systems-api-openapi.yml"
+  ],
+  "outputs": [
+    "general-dynamics-products-api-openapi.yml",
+    "general-dynamics-systems-api-openapi.yml"
+  ],
+  "archived": [],
+  "errors": [],
+  "warnings": [],
+  "notes": [],
+  "skipped": []
+}
