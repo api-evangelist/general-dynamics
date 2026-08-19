@@ -1,0 +1,29 @@
+{
+  "opencollection": "1.0.0",
+  "info": {
+    "name": "General Dynamics Mission Systems Products API",
+    "version": "1.0.0"
+  },
+  "items": [
+    {
+      "info": {
+        "name": "Products",
+        "type": "folder"
+      },
+      "items": [
+        {
+          "info": {
+            "name": "Get Products",
+            "type": "http"
+          },
+          "http": {
+            "method": "GET",
+            "url": "https://api.gdmissionsystems.com/products"
+          },
+          "docs": "Retrieve technology products catalog."
+        }
+      ]
+    }
+  ],
+  "bundled": true
+}
