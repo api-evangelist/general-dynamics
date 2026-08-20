@@ -29,6 +29,8 @@ apis:
   humanURL: https://gdmissionsystems.com/
   baseURL: https://api.gdmissionsystems.com
   tags:
+  - Product
+  tags_raw:
   - Products
   properties:
   - type: OpenAPI
