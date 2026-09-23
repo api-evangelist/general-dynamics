@@ -1,7 +1,9 @@
 ---
 title: GENERAL | definition in the Cambridge English Dictionary
 url: https://dictionary.cambridge.org/us/dictionary/english/general
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"General Dynamics" press release artificial intelligence'
 position: 5
 source: serpapi-google

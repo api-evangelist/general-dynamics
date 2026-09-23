@@ -1,7 +1,9 @@
 ---
 title: General (United States)
 url: https://en.wikipedia.org/wiki/General_(United_States)
-date: '2026-05-25'
+published: ''
+date_basis: harvested
+harvested: '2026-05-25'
 query: '"General Dynamics" press release artificial intelligence'
 position: 3
 source: serpapi-google
