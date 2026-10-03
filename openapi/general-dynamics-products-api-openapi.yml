@@ -29,13 +29,6 @@ paths:
                 $ref: '#/components/schemas/ProductList'
 components:
   schemas:
-    ProductList:
-      type: object
-      properties:
-        products:
-          type: array
-          items:
-            $ref: '#/components/schemas/Product'
     Product:
       type: object
       properties:
@@ -47,3 +40,10 @@ components:
           type: string
         description:
           type: string
+    ProductList:
+      type: object
+      properties:
+        products:
+          type: array
+          items:
+            $ref: '#/components/schemas/Product'
