@@ -49,6 +49,13 @@ paths:
                 $ref: '#/components/schemas/System'
 components:
   schemas:
+    SystemList:
+      type: object
+      properties:
+        systems:
+          type: array
+          items:
+            $ref: '#/components/schemas/System'
     System:
       type: object
       properties:
@@ -62,10 +69,3 @@ components:
           type: string
         status:
           type: string
-    SystemList:
-      type: object
-      properties:
-        systems:
-          type: array
-          items:
-            $ref: '#/components/schemas/System'
