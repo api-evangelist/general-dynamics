@@ -1,4 +1,4 @@
-# General Dynamics (general-dynamics)
+# General Dynamics
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -66,49 +66,114 @@
 
 General Dynamics Corporation is a global aerospace and defense company headquartered in Reston, Virginia. The company operates across five business segments: Aerospace, Marine Systems, Combat Systems, Technologies, and Mission Systems, providing business aviation, ship construction, land combat vehicles, weapons systems, and technology products and services.
 
-**APIs.json:** [https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/apis.yml](https://raw.githubusercontent.com/api-evangelist/general-dynamics/refs/heads/main/apis.yml)
+**Areas:** Aerospace · Defense · Mission Systems · Government · Fortune 100
 
-## Tags
+## General Dynamics on APIs.io
 
-- Aerospace
-- Defense
-- Mission Systems
-- Government
+Everything profiled for General Dynamics is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/general-dynamics/](https://apis.io/providers/general-dynamics/)** — or go straight to one of the APIs or properties below.
 
-## Timestamps
+### APIs (2)
 
-- **Modified:** 2026-05-19
+- [General Dynamics Products API](https://apis.io/apis/general-dynamics/general-dynamics-products-api/) — Technology products operations
+- [General Dynamics Systems API](https://apis.io/apis/general-dynamics/general-dynamics-systems-api/) — Mission systems operations
 
-## APIs
+### Published properties
 
-### General Dynamics Mission Systems API
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
 
-General Dynamics Mission Systems provides technology products and services for aerospace and defense applications, supporting mission- critical C4ISR solutions across land, sea, air, space, and cyber domains. The company does not offer a public developer API portal but utilizes API and microservices architectures internally for mission systems and defense technology solutions.
+#### Agentic access (1)
 
-- **Human URL:** [https://gdmissionsystems.com/](https://gdmissionsystems.com/)
-- **Base URL:** `https://api.gdmissionsystems.com`
+Which operations an agent can call, which act, and which need a human in the loop.
 
-#### Tags
+- [General Dynamics Agentic Access](https://apis.io/agentic-access/general-dynamics/general-dynamics-agentic-access/)
 
-- Aerospace
-- Defense
-- Government
-- Mission Systems
+#### Collections (3)
 
-#### Properties
+Postman and Open Collection request collections.
 
-- [Documentation](https://gdmissionsystems.com/)
-- [OpenAPI](openapi/general-dynamics-mission-systems-api-openapi.yml) — [OpenAPI Specification](https://spec.openapis.org/oas/latest.html)
-- [Postman Collection](collections/general-dynamics-mission-systems-api.postman_collection.json) — [Postman Collection 2.1](https://schema.getpostman.com/json/collection/v2.1.0/collection.json)
-- [Open Collection](collections/general-dynamics-mission-systems-api.opencollection.json) — [Open Collection 1.0](https://schema.opencollection.com/opencollection/v1.0.0.json)
+- [General Dynamics Mission Systems API](https://apis.io/collections/general-dynamics/open-general-dynamics-mission-systems-api/)
+- [General Dynamics Mission Systems Products API](https://apis.io/collections/general-dynamics/open-general-dynamics-products-api/)
+- [General Dynamics Mission Products Systems API](https://apis.io/collections/general-dynamics/open-general-dynamics-systems-api/)
 
-## Common Properties
+#### Security (1)
 
-- [LinkedIn](https://www.linkedin.com/company/general-dynamics)
+Authentication, trust centre, and vulnerability disclosure.
+
+- [General Dynamics Domain Security](https://apis.io/security/general-dynamics/general-dynamics-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [General Dynamics Plans Pricing](https://apis.io/plans/general-dynamics/general-dynamics-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [General Dynamics Rate Limits](https://apis.io/rate-limits/general-dynamics/general-dynamics-rate-limits/)
+
+#### FinOps (1)
+
+What the API costs to run, by operation.
+
+- [General Dynamics Finops](https://apis.io/finops/general-dynamics/general-dynamics-finops/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
 - [Website](https://www.gd.com)
-- [Mission  Systems](https://gdmissionsystems.com)
 
-## Maintainers
+## API Evangelist rating
 
-**FN:** API Evangelist
-**Email:** info@apievangelist.com
+**Kin Score 19.5** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 66.1 |
+| Contract quality | 41.6 |
+| Contract governance | 0.0 |
+| Operational transparency | 5.3 |
+| Developer ergonomics | 9.5 |
+| Access clarity | 5.3 |
+
+**Agent readiness 17.8** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | derived (partial credit) |
+| Reversibility Documented | na |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | na |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | derived (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | na |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 5.9** — Government & Public Sector
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/general-dynamics/](https://apis.io/providers/general-dynamics/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for General Dynamics: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/general-dynamics/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
